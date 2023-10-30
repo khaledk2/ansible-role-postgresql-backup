@@ -22,7 +22,6 @@ platforms:
     cgroupns_mode: host
     tmpfs:
       - /sys/fs/cgroup
-        -
 provisioner:
   name: ansible
   lint:
