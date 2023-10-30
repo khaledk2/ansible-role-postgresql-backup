@@ -12,10 +12,17 @@ platforms:
     image: eniocarboni/docker-rockylinux-systemd:9
     command: /sbin/init
     privileged: true
+    cgroupns_mode: host
+    tmpfs:
+      - /sys/fs/cgroup
   - name: postgresql-backupgz
     image: eniocarboni/docker-rockylinux-systemd:9
     command: /sbin/init
     privileged: true
+    cgroupns_mode: host
+    tmpfs:
+      - /sys/fs/cgroup
+        -
 provisioner:
   name: ansible
   lint:
